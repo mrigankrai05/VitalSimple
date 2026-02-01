@@ -16,16 +16,13 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 
-# Load environment variables
 load_dotenv()
 
-# Configure Logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
-# Enable CORS for Frontend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
