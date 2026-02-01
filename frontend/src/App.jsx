@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { Upload, Send, Activity, AlertCircle, CheckCircle, Info, Loader2 } from 'lucide-react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { Github } from 'lucide-react';
 
 // --- COMPONENT: ANALYSIS CARD (The "Big" Summary) ---
 // --- COMPONENT: ANALYSIS CARD (Updated with Full Table) ---
@@ -191,8 +192,8 @@ export default function App() {
         <div className="bg-blue-900 p-4 text-white flex items-center gap-3 shadow-md z-10">
           <Activity className="text-blue-300 w-8 h-8" />
           <div>
-            <h1 className="text-xl font-bold">MedRAG AI</h1>
-            <p className="text-xs text-blue-200">Private Local Analysis</p>
+            <h1 className="text-xl font-bold">VitalSimple</h1>
+            <p className="text-xs text-blue-200">Simplify Your Health Report In Seconds</p>
           </div>
         </div>
 
@@ -266,7 +267,23 @@ export default function App() {
             </div>
           )}
         </div>
+        <footer className="w-full bg-slate-200 py-6 mt-auto border-t border-slate-300">
+          <div className="flex flex-col items-center gap-3 text-slate-600">
+            <p className="font-medium text-sm tracking-wide">
+              Created By <span className="font-bold text-slate-800">Mrigank Rai</span>
+            </p>
 
+            <a
+              href="https://github.com/mrigankrai05"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-slate-800 text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-slate-700 transition-transform hover:scale-105 shadow-sm"
+            >
+              <Github className="w-4 h-4" />
+              GITHUB PROFILE
+            </a>
+          </div>
+        </footer>
       </div>
     </div>
   );
